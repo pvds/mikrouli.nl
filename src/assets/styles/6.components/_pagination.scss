@@ -1,0 +1,44 @@
+/*  ==========================================================================
+    Pagination
+    ========================================================================== */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: grid-unit(3);
+
+  &__item {
+    & + & {
+      margin-left: grid-unit(2);
+    }
+
+    &--previous {
+      margin-right: auto;
+
+      .pagination__icon {
+        margin-right: grid-unit(0.5);
+      }
+    }
+
+    &--next {
+      text-align: right;
+
+      .pagination__icon {
+        margin-left: grid-unit(0.5);
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: grid-unit(1);
+  }
+
+  &__icon {
+    flex: none;
+    width: grid-unit(1.5);
+  }
+}

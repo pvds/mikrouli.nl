@@ -1,0 +1,12 @@
+/*  ==========================================================================
+    Content header
+    ========================================================================== */
+
+.content-section {
+  &__inner {
+    @include container(100%);
+
+    padding-right: $base_spacing-h;
+    padding-left: $base_spacing-h;
+  }
+}

@@ -1,0 +1,31 @@
+/*  ==========================================================================
+    Footer
+    ========================================================================== */
+
+.footer {
+  @include text(sm);
+
+  padding: grid-unit(2) 0;
+  background-color: $color-black-100;
+
+  &__inner {
+    @include container(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: $base_spacing-h;
+    padding-left: $base_spacing-h;
+  }
+
+  &__link {
+    @include link;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__link-label {
+    margin-left: grid-unit(0.5);
+  }
+}

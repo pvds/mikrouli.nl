@@ -1,0 +1,67 @@
+/*  ==========================================================================
+    Help panel
+    ========================================================================== */
+
+.help {
+  position: fixed;
+  z-index: z(offcanvas);
+  bottom: 0;
+  width: 100%;
+  background-color: $color-black-900;
+  color: $color-white;
+  transform: translateY(100%);
+  transition: transform $animate-duration-medium ease-in-out;
+
+  &.is-visible {
+    transform: none;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: grid-unit(3) grid-unit(8);
+    justify-content: center;
+    overflow-y: auto;
+    max-height: 50vh;
+    padding: $base_spacing-h ($base_spacing-v * 2) $base_spacing-h $base_spacing-v;
+
+    @include mq-up(sm) {
+      grid-template-columns: max-content;
+    }
+
+    @include mq-up(md) {
+      grid-template-columns: repeat(2, max-content);
+      grid-column-gap: grid-unit(12);
+    }
+
+    @include mq-up(lg) {
+      grid-column-gap: grid-unit(16);
+    }
+  }
+
+  &__section-title {
+    @include text(sm);
+
+    margin-bottom: grid-unit(2);
+  }
+
+  &__close {
+    position: absolute;
+    top: grid-unit(3);
+    right: grid-unit(2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $min-touch-area;
+    height: $min-touch-area;
+    fill: rgba($color-white, $color-opacity-medium);
+
+    &:hover {
+      fill: $color-white;
+    }
+
+    &-icon {
+      width: $font-size-xs;
+    }
+  }
+}

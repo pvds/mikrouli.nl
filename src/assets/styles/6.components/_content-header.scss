@@ -1,0 +1,29 @@
+/*  ==========================================================================
+    Content header
+    ========================================================================== */
+
+.content-header {
+  padding-top: grid-unit(5);
+  padding-bottom: grid-unit(6);
+  background-color: $color-black-900;
+  color: $color-white;
+
+  &__title {
+    @include text(3xl);
+
+    &:not(:last-child) {
+      margin-bottom: grid-unit(1);
+    }
+  }
+
+  &__meta {
+    @include text(sm);
+
+    margin-bottom: grid-unit(2);
+    color: rgba($color-white, $color-opacity-medium);
+  }
+
+  &__intro {
+    @include text(md);
+  }
+}

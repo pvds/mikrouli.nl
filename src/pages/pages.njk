@@ -1,0 +1,36 @@
+---
+pagination:
+  data: collections.pages
+  size: 1
+  alias: page
+  addAllPagesToCollections: true
+tags:
+  - navigation
+layout: base
+permalink: "{{ page.fields.slug | slug }}/"
+eleventyComputed:
+  title: {{ page.fields.title }}
+---
+
+<div class="content">
+  {% contentSection { classes: 'content-header' }%}
+    <h1 class="content-header__title">{{ page.fields.title }}</h1>
+    {% if page.fields.intro %}
+      <div class="content-header__intro plain-text">{{ page.fields.intro | md | safe }}</div>
+    {% endif %}
+  {% endcontentSection %}
+
+  {% if page.fields.components or page.fields.links %}
+    <div class="content__main">
+      {%- for component in page.fields.components -%}
+        {% if component.sys.contentType.sys.id === 'content' %}
+          {% contentSection %}
+            {% contentBlock { fields: component.fields } %}
+              {{ component.fields.text | md | safe }}
+            {% endcontentBlock %}
+          {% endcontentSection %}
+        {% endif %}
+      {%- endfor -%}
+    </div>
+  {% endif %}
+</div>
