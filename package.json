@@ -28,7 +28,7 @@
     "cache:api": "node ./src/api/contentful-preload.js",
     "prestart": "run-p clean cache:api",
     "start": "eleventy --serve",
-    "prebuild": "yarn cache",
+    "prebuild": "yarn cache:api",
     "build": "cross-env ELEVENTY_ENV=production eleventy",
     "prebuild:serve": "run-p clean cache:api",
     "build:serve": "cross-env ELEVENTY_ENV=production eleventy --serve",
