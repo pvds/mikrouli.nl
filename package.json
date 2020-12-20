@@ -74,6 +74,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "contentful": "^7.14.6",
+    "contentful-cli": "^1.5.1",
     "critical": "^2.0.3",
     "cross-env": "^7.0.2",
     "cssesc": "^3.0.0",
