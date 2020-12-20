@@ -30,7 +30,7 @@
     "start": "eleventy --serve",
     "prebuild": "yarn cache",
     "build": "cross-env ELEVENTY_ENV=production eleventy",
-    "prebuild:serve": "run-p clean cache",
+    "prebuild:serve": "run-p clean cache:api",
     "build:serve": "cross-env ELEVENTY_ENV=production eleventy --serve",
     "lint": "run-p lint:*",
     "lint:js": "eslint . --cache --fix",
