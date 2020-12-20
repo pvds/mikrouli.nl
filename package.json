@@ -25,8 +25,8 @@
   ],
   "scripts": {
     "clean": "del-cli dist",
-    "cache": "node ./src/api/contentful-preload.js",
-    "prestart": "run-p clean cache",
+    "cache:api": "node ./src/api/contentful-preload.js",
+    "prestart": "run-p clean cache:api",
     "start": "eleventy --serve",
     "prebuild": "yarn cache",
     "build": "cross-env ELEVENTY_ENV=production eleventy",
