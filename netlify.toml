@@ -17,8 +17,8 @@
         Referrer-Policy= "no-referrer-when-downgrade"
 
 # [[redirects]]
-#     from = "https://pragmatics.netlify.com/*"
-#     to = "https://pragmatics.dev/:thump
+#     from = "https://mikrouli.netlify.com/*"
+#     to = "https://mikrouli.nl/:splat
 #     status = 301
 #     force = true
 
