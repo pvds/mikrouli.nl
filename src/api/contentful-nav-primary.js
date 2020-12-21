@@ -8,7 +8,7 @@ module.exports = async () => {
   // Only make API call if local json file does not exist OR in production environment
   return !json.exists(cache) || process.env.ELEVENTY_ENV === 'production'
     ? contentful.client
-        .getEntry('2lfsBW9lpkqiVXkKgGnapP')
+        .getEntry('7rtbhuq4c4kUdrRUGSXm9D')
         .then((response) => {
           json.write(cache, JSON.stringify(response));
           console.info('Contentful navigation: written to cache');
