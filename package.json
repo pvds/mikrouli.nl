@@ -1,22 +1,15 @@
 {
-  "name": "@pragmatics/eleventy-boilerplate",
+  "name": "@pvds/mikrouli",
   "version": "0.1.0",
-  "description": "A boilerplate for eleventy websites",
-  "homepage": "https://pragmatics.netlify.app",
+  "description": "Website for Mikrouli",
+  "homepage": "https://mikrouli.nl",
   "repository": {
     "type": "git",
-    "url": "http://github.com/pvds/eleventy-boilerplate"
+    "url": "http://github.com/pvds/mikrouli"
   },
   "keywords": [
-    "pragmatics",
-    "eleventy",
-    "eleventy pwa",
-    "eleventy starter",
-    "eleventy boilerplate",
-    "11ty",
-    "11ty pwa",
-    "11ty starter",
-    "11ty boilerplate"
+    "mikrouli",
+    "eleventy"
   ],
   "author": "Peter van der Steen",
   "browserslist": [
